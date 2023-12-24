@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Foodizz
 Welcome to Foodizz – where the aroma meets innovation! 🌮✨
 
