@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = async(e) =>{
     
     e.preventDefault(); // prevents the default click behavior
-    
+     
     try{ 
         const response = await fetch("http://localhost:5000/api/loginuser",{
           method:"POST",
@@ -22,15 +22,17 @@ const Login = () => {
           },
           body: JSON.stringify({email:credentials.email, password:credentials.password})
         });
-          
+           
     
         const jsonData = await response.json();
     
         if(!jsonData.success){
           alert("Login Crendentials galat hai bhai🙄...");
         }else{
-          console.log("Login hogya bhai ✨...");
-          console.log(credentials);
+          // console.log("Login hogya bhai ✨...");
+          // console.log(credentials);
+          localStorage.setItem("authToken",jsonData.authToken);
+          console.log(localStorage.getItem("authToken"));
           navigate("/"); 
         } 
 
