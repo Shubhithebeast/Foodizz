@@ -18,4 +18,3 @@ Join the Feast:
 Embark on a gastronomic adventure with Foodizz. Whether you're a foodie, a tech enthusiast, or both – there's a seat reserved for you at our digital dining table. Let's turn every click into a culinary celebration! 🎉🍕
 
 
->>>>>>> f9415d2fbb3512393be272d3dc4c5f4033e66422

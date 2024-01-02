@@ -9,10 +9,10 @@ const mongo_url =
 
         const fetched_data = mongoose.connection.db.collection("food_items");
         const data = await fetched_data.find({}).toArray();
-        console.log(data);
+        // console.log(data);
     } catch (error) {
         console.error("Error connecting to the database...", error);
-    }
+    } 
 }
 
 module.exports = mongodb;
