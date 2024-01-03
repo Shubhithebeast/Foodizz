@@ -31,34 +31,38 @@ Open your terminal on your local machine.
 
 Navigate to the directory where you want to store the project:
 
-bash
+<br>
 Copy code
 cd path/to/your/directory
 Clone the forked repository to your local machine:
+<br>
 
-bash
 Copy code
 git clone https://github.com/your-username/Foodizz.git
 Setting Up the Project:
+<br>
 
 Move into the project directory:
 
-bash
+<br>
 Copy code
 cd Foodizz
 Install the necessary dependencies:
 
-bash
+<br>
 Copy code
 npm install
 Running the Project Locally:
+<br>
 
 Start the development server:
-
-bash
+<br>
 Copy code
 npm start
+<br>
+
 Open your web browser and visit http://localhost:3000 to see Foodizz running locally.
+<br>
 
 Now you have successfully forked, cloned, and set up the Foodizz project on your local machine. Feel free to explore and make your contributions! 🚀
 
