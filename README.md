@@ -16,49 +16,44 @@ Key Features:
 
 Join the Feast:
 Embark on a gastronomic adventure with Foodizz. Whether you're a foodie, a tech enthusiast, or both – there's a seat reserved for you at our digital dining table. Let's turn every click into a culinary celebration! 🎉🍕
-
+<br><br>
 If U want to fork or clone the Foodizz project and start it on their PC, you can follow these steps:
-
+<br>
 Forking the Repository:
 
 Visit the Foodizz repository on GitHub: Foodizz Repository.
-
+<br>
 Click on the "Fork" button in the upper right corner of the page. This will create a copy of the repository in your GitHub account.
 
 Cloning the Forked Repository:
-
+<br>
 Open your terminal on your local machine.
 
 Navigate to the directory where you want to store the project:
-
 <br>
-Copy code
-cd path/to/your/directory
+<br>
+cmd -> cd path/to/your/directory
 Clone the forked repository to your local machine:
 <br>
 
-Copy code
-git clone https://github.com/your-username/Foodizz.git
+cmd -> git clone https://github.com/your-username/Foodizz.git
 Setting Up the Project:
 <br>
 
 Move into the project directory:
 
 <br>
-Copy code
-cd Foodizz
+cmd -> cd Foodizz
 Install the necessary dependencies:
 
 <br>
-Copy code
-npm install
+cmd -> npm install
 Running the Project Locally:
 <br>
 
 Start the development server:
 <br>
-Copy code
-npm start
+cmd -> npm start
 <br>
 
 Open your web browser and visit http://localhost:3000 to see Foodizz running locally.
