@@ -1,15 +1,22 @@
 import React from 'react'
-import { Card, Container } from 'react-bootstrap';
+import { Button, Card, Container } from 'react-bootstrap';
 
-const Cards = () => {
+const Cards = (props) => {
+  let options = props.options;
+  let priceOptions = Object.keys(options);
+
+  const handleAddToCart = () =>{
+
+  }
+
   return (
     <div>
         <div>
-        <Card border="danger" className="mt-3" style={{ width: '18rem' , maxHeight : "350px"}}>
-          <Card.Img variant="top" src="https://www.southernliving.com/thmb/3x3cJaiOvQ8-3YxtMQX0vvh1hQw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2652401_QFSSL_SupremePizza_00072-d910a935ba7d448e8c7545a963ed7101.jpg" />
+        <Card border="danger" className="mt-3" style={{ width: '20rem' , maxHeight : "400px"}}>
+          <Card.Img variant="top" src={props.imgSrc} style={{height:"230px",objectFit:"fill"}} />
           <Card.Body> 
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>This is Card Description </Card.Text>
+            <Card.Title >{props.foodName}</Card.Title>
+            
             <Container className="w-100">
                 <select className='m-2 h-100 bg-warning rounded'>
                   {Array.from(Array(6),(e,i)=>{
@@ -19,10 +26,13 @@ const Cards = () => {
                   })}
                 </select>
                 <select className='m-2 h-100 bg-warning rounded'>
-                  <option value="half">Half</option>
-                  <option value="full">Full</option>
+                 {priceOptions.map((data)=>{
+                  return <option key={data} value={data}>{data}</option>
+                 })}
                 </select>
                 <div className='d-inline h-100 fs-5'>Total Price</div>
+                <hr />
+                <Button className='bg-success ms-2' onclick={handleAddToCart}>Add to Cart</Button>
             </Container>
           </Card.Body>
         </Card>
