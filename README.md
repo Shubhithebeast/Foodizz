@@ -17,7 +17,7 @@ Key Features:
 Join the Feast:
 Embark on a gastronomic adventure with Foodizz. Whether you're a foodie, a tech enthusiast, or both – there's a seat reserved for you at our digital dining table. Let's turn every click into a culinary celebration! 🎉🍕
 <br><br>
-If U want to fork or clone the Foodizz project and start it on their PC, you can follow these steps:
+✅🔴🟢🟡If U want to fork or clone the Foodizz project and start it on their PC, you can follow these steps:🟢🟡🔴
 <br>
 Forking the Repository:
 
