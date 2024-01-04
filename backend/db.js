@@ -3,7 +3,7 @@ const mongo_url =
   "mongodb+srv://foodizz:foodizz123@cluster0.hal8z52.mongodb.net/foodizz_db?retryWrites=true&w=majority";
 
   const mongodb = async () => {
-    try {
+    try { 
         await mongoose.connect(mongo_url, { useNewUrlParser: true, useUnifiedTopology: true });
         console.log("Database connected successfully...");
 

@@ -1,0 +1,78 @@
+import React from "react";
+import { Table, Container, Button } from "react-bootstrap";
+import { useCart, useDispatchCart } from "../components/ContextReducer";
+// import trash from "../trash"
+import Delete from '@material-ui/icons/Delete'
+
+const Cart = () => {
+  let data = useCart();
+  let dispatch = useDispatchCart();
+
+//   console.log("cart data: "+data.length+"---");
+
+  if (data.length === 0) {
+    return (
+      <div>
+        <h1 className="w-100 text-center text-white m-5">Oops! Your cart is empty!</h1>
+      </div>
+    );
+  }
+
+  let totalPrice = data.reduce((total, food) => total + food.price, 0);
+
+  return (
+    <div>
+
+    {/* {console.log(data)} */}
+    <Container className=' mt-5 table-responsive  table-responsive-sm table-responsive-md' >
+      <Table striped bordered hover variant="dark" >
+        <thead className=' text-success fs-4'>
+          <tr>
+            <th >#</th>
+            <th >Name</th>
+            <th >Quantity</th>
+            <th >Option</th>
+            <th >Amount</th>
+            <th >Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((food, index) => (
+            <tr>
+              <th >{index + 1}</th>
+              <td >{food.name}</td>
+              <td>{food.qty}</td>
+              <td>{food.size}</td>
+              <td>{food.price}</td>
+              <td>
+                  <Button>
+                  <Delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} />
+                    {/* <img
+                      src=""
+                      alt="delete"
+                      onClick={() => {
+                        dispatch({
+                          type: "REMOVE",
+                          index: index,
+                        });
+                      }}
+                    /> */}
+                  </Button>
+                </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      <div><h1 className='fs-2 text-white'>Total Price: {totalPrice}/-</h1></div>
+      <div>
+        <Button className='bg-success mt-5 '  > Check Out </Button>
+      </div>
+    </Container>
+
+
+
+  </div>
+  );
+};
+
+export default Cart;

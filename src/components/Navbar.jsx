@@ -1,8 +1,13 @@
-import React from 'react';
-import { Navbar, Nav, Container} from 'react-bootstrap';
+import React,{useState} from 'react';
+import { Navbar, Nav, Container, Badge} from 'react-bootstrap';
 import {useNavigate} from 'react-router-dom';
+import Cart from '../screens/Cart';
+import Modal from '../modal'
+import { useCart } from './ContextReducer';
 
 const MyNavbar = () => {
+  let data = useCart();
+  const [cartView, setCartView] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout =()=>{
@@ -28,14 +33,16 @@ const MyNavbar = () => {
               <Nav.Link className="btn text-white bg-success " href="/login">Login</Nav.Link>
               <Nav.Link className="btn text-white bg-success mx-4" href="/createuser">SignUp</Nav.Link>
             </div> : 
-            <div>
-            <div className="btn text-white bg-success " >
-              MyCart
-            </div>
+            <div>  
+            <div className="btn text-white bg-success " onClick={()=>setCartView(true)} >
+              MyCart {""}
+              <Badge pill bg='danger'>{data.length}</Badge>
+            </div> 
+            {cartView ? <Modal onClose={()=> setCartView(false)}> <Cart/> </Modal> :null}
 
               <div className="btn text-white bg-danger mx-4" onClick={handleLogout}>
                 Logout
-              </div>
+              </div> 
             </div>
 
           }

@@ -10,6 +10,22 @@ const reducer = (state,action)=>{
         id:action.id, name:action.name, qty:action.qty,img:action.img,
         size:action.size, price:action.price
       }]
+
+    case "REMOVE":
+      let new_arr=[...state]
+      new_arr.splice(action.index,1)
+      return new_arr;
+
+    case "UPDATE":
+      let arr = [...state]
+      arr.find((food,index)=>{
+        if(food.id === action.id){
+          // console.log(food.qty,parseInt(action.qty), action.price+food.price)
+          arr[index] = {...food, qty:parseInt(action.qty)+food.qty, price: action.price+ food.price}
+        } 
+        return arr;
+      })
+      return arr;
       
       throw Error('Error in Reducer...');
 
