@@ -26,7 +26,12 @@ const reducer = (state,action)=>{
         return arr;
       })
       return arr;
-      
+
+    case "CLEAR_CART":
+        let emp_arr=[]
+        return emp_arr
+
+    default:       
       throw Error('Error in Reducer...');
 
   }

@@ -19,7 +19,7 @@ const Home =()=> {
         'Content-Type':'application/json'
       }
     })
-
+ 
     response = await response.json();
     // console.log(response[0],response[1]);
 
@@ -29,14 +29,9 @@ const Home =()=> {
 
   useEffect(() =>{
     loadData();
+    // it will call whenever page load ,only once
   },[])
   // loadData will will call without dependices [] 
-
-
-
-
-
-
 
   return (
     <>

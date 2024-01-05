@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Navbar, Nav, Container, Badge} from 'react-bootstrap';
+import { Navbar, Nav, Badge} from 'react-bootstrap';
 import {useNavigate} from 'react-router-dom';
 import Cart from '../screens/Cart';
 import Modal from '../modal'
@@ -23,7 +23,7 @@ const MyNavbar = () => {
           <Nav className='fs-5 me-auto ms-3'>
             <Nav.Link  active href="/">Home</Nav.Link>
             {(localStorage.getItem("authToken")) ?
-            <Nav.Link  active href="/myOrder">My Orders</Nav.Link> : ""
+            <Nav.Link  active href="/myorder">My Orders</Nav.Link> : ""
 
             }
           </Nav>

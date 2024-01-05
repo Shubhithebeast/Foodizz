@@ -31,6 +31,8 @@ const Login = () => {
         }else{
           // console.log("Login hogya bhai ✨...");
           // console.log(credentials);
+          // email ko local storage m save krna taki, checkout krte time pta lge konse user ka data h
+          localStorage.setItem("userEmail",credentials.email);
           localStorage.setItem("authToken",jsonData.authToken);
           console.log(localStorage.getItem("authToken"));
           navigate("/"); 

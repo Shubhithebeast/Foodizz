@@ -105,7 +105,7 @@ const Cards = (props) => {
               </select>
               <div className="d-inline h-100 fs-5">₹{finalPrice}/-</div>
               <hr />
-              <Button className="bg-success ms-2" onClick={handleAddToCart}>
+              <Button hover className="bg-success ms-2" onClick={handleAddToCart}>
                 Add to Cart
               </Button>
             </Container>

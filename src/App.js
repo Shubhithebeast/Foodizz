@@ -8,6 +8,7 @@ import {
 import Login from './screens/Login' 
 import SignUp from './screens/SignUp'
 import CartProvider from './components/ContextReducer';
+import MyOrder from './screens/MyOrder';
 
 const App=()=> { 
   return (
@@ -18,6 +19,7 @@ const App=()=> {
             <Route exact path='/' element={<Home/>}/>
             <Route exact path='/login' element={<Login/>}/>
             <Route exact path='/createuser' element={<SignUp/>}/>
+            <Route exact path='/myorder' element={<MyOrder/>}/>
           </Routes>
         </div>
       </Router>
