@@ -47,4 +47,3 @@ Visit http://localhost:3000 to experience Foodizz!
 
 ## Acknowledgments
 Special thanks to the MERN Stack community for their invaluable resources and support, making Foodizz possible. Enjoy the convenience of Foodizz – Your ultimate destination for delicious food, just a click away! 🍴📲
->>>>>>> 914de2c674240d764f90e3082a6f4b170a0898a9
