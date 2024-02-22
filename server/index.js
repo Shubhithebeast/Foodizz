@@ -4,8 +4,7 @@ const app = express()
 const port = process.env.PORT || 5000
 const mongodb=require("./db");
 const cors = require('cors');
-
- 
+  
 mongodb();
 
 app.use(cors());
@@ -18,6 +17,6 @@ app.get('/', (req, res) => {
 app.use('/api/auth', require('./Routes/Auth'));
 
 app.listen(port,()=>{
-  console.log(`Server running on ${port}`);
+  console.log(`Server running on ${port}`);   
 }); 
 
